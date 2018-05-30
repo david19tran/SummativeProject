@@ -3,6 +3,7 @@
 <form  action="register.php" autocomplete="on"> 
     <h1> Sign up </h1> 
     <p> 
+        <! Creating Labels for website >
          <label for="firstnamesignup" class="fname" data-icon="u">First Name:</label>
          <input id="firstnamesignup" name="firstnamesignup" required="required" type="text" placeholder="First" />
     </p>
@@ -28,6 +29,7 @@
     </p>
     <p> 
          <label>Date of Birth:</label>
+        <! Creating a drop down list>
          <select name="month" onChange="changeDate(this.options[selectedIndex].value);">
          <option value="na">Month</option>
          <option value="1">January</option>
