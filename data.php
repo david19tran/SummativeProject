@@ -1,5 +1,5 @@
 <?php 
-//Connects to your Database 
+<! Setting up database >
 $conect = mysqli_connect("db location","username","password", "forks") or die(mysql_error()); 
 //Checks if there is a login cookie
 if(isset($_COOKIE['ID_your_site'])){ //if there is, it logs you in and directes you to the members page
