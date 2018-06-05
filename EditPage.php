@@ -83,4 +83,57 @@ $totalRows_EditPage = mysql_num_rows($EditPage);
 <li><a href="#">Services</a></li>
 <li><a href="#">About</a></li>
 <li><a href="#">Contact</a></li>
-
+</ul>
+</nav>
+</div>
+<div id ="Content">
+  <h1>Edit Page</h1>
+  <table width="800" border="0" align="center">
+    <tr>
+      <td><form id="EditPageForm" name="EditPageForm" method="POST" action="<?php echo $editFormAction; ?>">
+        <table width="400" border="0" align="center">
+          <tr>
+            <td><label for="PageContent"></label>
+              <textarea name="PageContent" id="PageContent" cols="45" rows="5"><?php echo $row_EditPage['PageContent']; ?></textarea></td>
+          </tr>
+          <tr>
+            <td>Keywords</td>
+          </tr>
+          <tr>
+            <td><label for="Keywords"></label>
+              <textarea name="Keywords" id="Keywords" cols="45" rows="5"><?php echo $row_EditPage['Keywords']; ?></textarea></td>
+          </tr>
+          <tr>
+            <td>Meta Description</td>
+          </tr>
+          <tr>
+            <td><label for="MetaDesc"></label>
+              <textarea name="MetaDesc" id="MetaDesc" cols="45" rows="5"><?php echo $row_EditPage['MetaDesc']; ?></textarea></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td><input type="submit" name="Update" id="Update" value="Update Page" />
+              <input name="IDhiddenField" type="hidden" id="IDhiddenField" value="<?php echo $row_EditPage['ID']; ?>" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+        <input type="hidden" name="MM_update" value="EditPageForm" />
+      </form></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+</div>
+<div id ="Footer">Copyright or whatever </div>
+</div>
+</body>
+</html>
+<?php
+mysql_free_result($EditPage);
+?>

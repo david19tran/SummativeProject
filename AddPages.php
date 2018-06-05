@@ -94,3 +94,53 @@ $totalRows_Pages = mysql_num_rows($Pages);
 </ul>
 </nav>
 </div>
+<div id ="Content">
+  <table width="800" border="0" align="center">
+    <tr>
+      <td><form id="AddPagesForm" name="AddPagesForm" method="POST" action="<?php echo $editFormAction; ?>">
+        <table width="0" border="0" align="center">
+          <tr>
+            <td><label for="NewPage"></label>
+              <input type="text" name="NewPage" id="NewPage" /></td>
+            <td><input type="submit" name="AddPageButton" id="AddPageButton" value="Add Page" /></td>
+          </tr>
+        </table>
+        <input type="hidden" name="MM_insert" value="AddPagesForm" /> 
+        </form>
+        <table width="800" border="0">
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td><?php if ($totalRows_Pages > 0) { // Show if recordset not empty ?>
+                <?php do { ?>
+                  <table width="400" border="0" align="center">
+                    <tr>
+                      <td width="166"><?php echo $row_Pages['PageName']; ?></td>
+                      <td width="224"><a href="EditPage.php?ID=<?php echo $row_Pages['ID']; ?>">Edit Page Content</a></td>
+                      </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td><form id="DeletePageForm" name="DeletePageForm" method="post" action="">
+                        <input name="DeletPagehiddenField" type="hidden" id="DeletPagehiddenField" value="<?php echo $row_Pages['ID']; ?>" />
+                        <input type="submit" name="DeletePageButton" id="DeletePageButton" value="Delete Page" />
+                      </form></td>
+                      </tr>
+                  </table>
+                  <?php } while ($row_Pages = mysql_fetch_assoc($Pages)); ?>
+                <?php } // Show if recordset not empty ?></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+</div>
+<div id ="Footer">Copyright or whatever </div>
+</div>
+</body>
+</html>
+<?php
+mysql_free_result($Pages);
+?>

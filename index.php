@@ -45,3 +45,30 @@ $totalRows_CMSPage = mysql_num_rows($CMSPage);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 </head>
+
+<body> 
+<div id ="Container">
+<div id ="Header"></div>
+<div id ="NavBar">
+<nav>
+<ul>
+<li><a href="index.php">Home</a></li>
+<?php if ($totalRows_CMSPage > 0) { // Show if recordset not empty ?>
+  <?php do { ?>
+    <li><a href="SubPage.php?ID=<?php echo $row_CMSPage['ID']; ?>"><?php echo $row_CMSPage['PageName']; ?></a></li>
+    <?php } while ($row_CMSPage = mysql_fetch_assoc($CMSPage)); ?>
+  <?php } // Show if recordset not empty ?>
+</ul>
+</nav>
+</div>
+<div id ="Content">
+  <h1>Header here </h1>
+  <p>just put anything you want here </p>
+</div>
+<div id ="Footer">Copyright or whatever | <a href="AddPages.php">Admin</a></div>
+</div>
+</body>
+</html>
+<?php
+mysql_free_result($CMSPage);
+?>

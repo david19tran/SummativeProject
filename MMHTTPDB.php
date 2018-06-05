@@ -78,4 +78,32 @@ if (isset($oConn) && $oConn)
 
 	if ($_POST['opCode'] == 'IsOpen'){
 			$answer = $oConn->TestOpen();
+	}elseif (is_resource($oConn->connectionId) && $oConn->isOpen){
 
+		switch ($_POST['opCode']){
+				case 'GetTables': 				$answer = $oConn->GetTables(@$_POST['Database']); break;
+				case 'GetColsOfTable': 		$answer = $oConn->GetColumnsOfTable(@$_POST['TableName']); break;
+				case 'ExecuteSQL':				$answer = $oConn->ExecuteSQL(@$_POST['SQL'], @$_POST['MaxRows']); break;
+				case 'GetODBCDSNs':				$answer = $oConn->GetDatabaseList(); break;
+				case 'SupportsProcedure': $answer = $oConn->SupportsProcedure(); break;
+				case 'GetProviderTypes': 	$answer = $oConn->GetProviderTypes(); break;
+				case 'GetViews': 					$answer = $oConn->GetViews(); break;
+				case 'GetProcedures': 		$answer = $oConn->GetProcedures(); break;
+				case 'GetParametersOfProcedure': $answer = $oConn->GetParametersOfProcedure(@$_POST['ProcName']); break;
+				case 'ReturnsResultset': 	$answer = $oConn->ReturnsResultSet($_POST['RRProcName']); break;
+				case 'ExecuteSP': 				$answer = $oConn->ExecuteSP(@$_POST['ExecProcName'], 0, @$_POST['ExecProcParameters']); break;
+				case 'GetKeysOfTable': 		$answer = $oConn->GetPrimaryKeysOfTable(@$_POST['TableName']); break;
+				default: $answer = create_error('The \''.$_POST['opCode'].'\' command is not supported.');	break;
+		}
+	}
+
+	$oConn->Close();
+}else{
+	$answer = create_error('The Connection Module was not initialized properly for an unknown reason.');
+}
+
+log_messages("\nAnswer From Database:\n\n\t".@$answer."\n\n\n");
+echo $answer;
+
+echo '</html>';
+?>
