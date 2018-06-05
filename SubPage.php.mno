@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_CMSPage" value="name:ID;datatype:int,name:PageName;datatype:string,name:PageContent;datatype:blob,name:Keywords;datatype:string,name:MetaDesc;datatype:string,name:Timestamp;datatype:timestamp" />
+	<infoitem key="UD_PageContent" value="name:ID;datatype:int,name:PageName;datatype:string,name:PageContent;datatype:blob,name:Keywords;datatype:string,name:MetaDesc;datatype:string,name:Timestamp;datatype:timestamp" />
+</info>
