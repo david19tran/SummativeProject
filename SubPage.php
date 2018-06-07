@@ -77,7 +77,7 @@ $totalRows_PageContent = mysql_num_rows($PageContent);
   <h1><?php echo $row_PageContent['PageName']; ?></h1>
   <p><?php echo $row_PageContent['PageContent']; ?></p>
 </div>
-<div id ="Footer">Copyright or whatever </div>
+<div id ="Footer">Copyright</div>
 </div>
 </body>
 </html>

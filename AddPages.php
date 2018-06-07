@@ -87,10 +87,7 @@ $totalRows_Pages = mysql_num_rows($Pages);
 <div id ="NavBar">
 <nav>
 <ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Contact</a></li>
+<li><a href="index.php">Home</a></li>
 </ul>
 </nav>
 </div>
@@ -128,7 +125,7 @@ $totalRows_Pages = mysql_num_rows($Pages);
                       </tr>
                   </table>
                   <?php } while ($row_Pages = mysql_fetch_assoc($Pages)); ?>
-                <?php } // Show if recordset not empty ?></td>
+              <?php } // Show if recordset not empty ?></td>
           </tr>
           <tr>
             <td>&nbsp;</td>
@@ -137,7 +134,7 @@ $totalRows_Pages = mysql_num_rows($Pages);
     </tr>
   </table>
 </div>
-<div id ="Footer">Copyright or whatever </div>
+<div id ="Footer">Copyright </div>
 </div>
 </body>
 </html>

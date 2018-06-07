@@ -79,10 +79,7 @@ $totalRows_EditPage = mysql_num_rows($EditPage);
 <div id ="NavBar">
 <nav>
 <ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Contact</a></li>
+<li><a href="index.php">Home</a></li>
 </ul>
 </nav>
 </div>
@@ -92,6 +89,9 @@ $totalRows_EditPage = mysql_num_rows($EditPage);
     <tr>
       <td><form id="EditPageForm" name="EditPageForm" method="POST" action="<?php echo $editFormAction; ?>">
         <table width="400" border="0" align="center">
+          <tr>
+            <td>Content</td>
+          </tr>
           <tr>
             <td><label for="PageContent"></label>
               <textarea name="PageContent" id="PageContent" cols="45" rows="5"><?php echo $row_EditPage['PageContent']; ?></textarea></td>
@@ -120,17 +120,14 @@ $totalRows_EditPage = mysql_num_rows($EditPage);
           <tr>
             <td>&nbsp;</td>
           </tr>
-          <tr>
-            <td>&nbsp;</td>
-          </tr>
-        </table>
+          </table>
         <input type="hidden" name="MM_update" value="EditPageForm" />
       </form></td>
     </tr>
   </table>
   <p>&nbsp;</p>
 </div>
-<div id ="Footer">Copyright or whatever </div>
+<div id ="Footer">Copyright </div>
 </div>
 </body>
 </html>

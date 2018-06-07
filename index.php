@@ -63,9 +63,11 @@ $totalRows_CMSPage = mysql_num_rows($CMSPage);
 </div>
 <div id ="Content">
   <h1>Header here </h1>
-  <p>just put anything you want here </p>
+  <p>Lorem ipsum dolor sit amet, massa vestibulum, vel quam bibendum amet vulputate orci massa, varius cursus justo commodo non volutpat, at consequatur, vitae amet. Vehicula parturient enim fermentum tristique tortor, ligula pellentesque, dis mollis, nec eu molestie arcu morbi. Blandit blandit, integer in erat libero, nec convallis urna, integer suscipit nulla est. Posuere ut luctus urna, eu lorem integer, lorem donec mauris nulla pede montes. Aliquam viverra vitae sapien curabitur, luctus sit sit mi. Per elit id nec, nunc pellentesque nam tellus, enim ultrices pede metus, aenean et adipiscing, aliquam ac massa suspendisse vitae pede pellentesque. Risus eleifend, nec velit mauris duis ante sed, massa nam justo ipsum nunc, nisl leo, urna rhoncus. </p>
+  <p>&nbsp;</p>
+  <p>Neque velit. Amet arcu felis mattis, vitae cras libero dui lacus scelerisque ac, felis ultricies, accumsan dolor justo auctor id. Consequatur vulputate ut, pharetra interdum rutrum erat mi ante dolor. Consequat fusce elit perspiciatis, tincidunt sollicitudin quam rerum enim imperdiet quam, ad ac quis a arcu eu, eget donec in nam, condimentum urna bibendum.</p>
 </div>
-<div id ="Footer">Copyright or whatever | <a href="AddPages.php">Admin</a></div>
+<div id ="Footer">Copyright | <a href="AddPages.php">Admin</a></div>
 </div>
 </body>
 </html>
