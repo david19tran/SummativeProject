@@ -67,7 +67,7 @@ $totalRows_CMSPage = mysql_num_rows($CMSPage);
   <p>&nbsp;</p>
   <p>Neque velit. Amet arcu felis mattis, vitae cras libero dui lacus scelerisque ac, felis ultricies, accumsan dolor justo auctor id. Consequatur vulputate ut, pharetra interdum rutrum erat mi ante dolor. Consequat fusce elit perspiciatis, tincidunt sollicitudin quam rerum enim imperdiet quam, ad ac quis a arcu eu, eget donec in nam, condimentum urna bibendum.</p>
 </div>
-<div id ="Footer">Copyright | <a href="AddPages.php">Admin</a></div>
+<div id ="Footer">Copyright | <a href="Login.php">Admin</a></div>
 </div>
 </body>
 </html>
