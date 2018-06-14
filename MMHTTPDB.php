@@ -16,13 +16,7 @@ function log_messages($error_message){
 		}
 		return false;
 }
-function create_error($error_msg = '', $line = -1){
-		if ($error_msg != ''){
-				return '<ERRORS><ERROR><DESCRIPTION>'.$error_msg.'</DESCRIPTION></ERROR></ERRORS>\n';
-		}else{
-				return '<ERRORS><ERROR><DESCRIPTION> Unidentified Connection Error at Line '.$line.'</DESCRIPTION></ERROR></ERRORS>\n';
-		}
-}
+
 
 log_messages("\n--------------------------------");
 // what parameters were sent ?!
